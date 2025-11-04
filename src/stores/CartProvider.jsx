@@ -27,14 +27,13 @@ export default function CartProvider({children}){
             const existProduct = prevCart.find((item) => item.id === product.id);
 
             if (existProduct) {
+                alert(`${product.title} добавлен в корзину`)
                 return prevCart.map((item) =>
                     item.id === product.id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
                 );
             }
-
-
             return [...prevCart, { ...product, quantity: 1 }];
         });
     }
@@ -47,8 +46,6 @@ export default function CartProvider({children}){
             return prev.map((p) => {
             if (p.id === id) {
                 const newQuantity = p.quantity - 1;
-
-                // ограничиваем минимум до 1
                 if (newQuantity < 1) {
                 return { ...p, quantity: 1 };
                 } else {

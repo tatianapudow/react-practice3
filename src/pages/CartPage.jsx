@@ -14,9 +14,8 @@ export default function CartPage() {
     return (
       <section className="text-center py-20">
         <h1 className="text-2xl font-semibold mb-4">Your cart is empty 🛒</h1>
-        <NavLink
-          to="/products"
-          className="text-green-600 hover:underline font-medium"
+        <NavLink to="/products"
+          className="text-green-600 hover:text-green-900 font-medium"
         >
           Back to shopping
         </NavLink>

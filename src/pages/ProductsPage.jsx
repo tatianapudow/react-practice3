@@ -1,14 +1,12 @@
 import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../stores/CartContext";
 import { NavLink } from "react-router-dom";
+import Satrs from "../commponents/Stars";
 
 export default function ProductsPage() {
     const [products, setProducts] = useState([])
-    // const [cart, setCart] = useContext(CartContext)
     const {cart, addToCart, doIncrement, doDecrement, Delete} = useContext(CartContext)
 
-
-   
     useEffect(() => {
         async function getProducts() {
             const resp = await fetch('https://dummyjson.com/products')
@@ -44,6 +42,9 @@ export default function ProductsPage() {
                             <span className="text-green-600 font-semibold">
                                 {product.price}$
                             </span>
+                        </div>
+                        <div className="mt-1 mb-2">
+                            <Satrs rating={product.rating}/>
                         </div>
 
                         <p className="text-gray-500 text-sm mt-1">{product.description}</p>
