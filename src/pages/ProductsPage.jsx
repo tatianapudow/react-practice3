@@ -5,14 +5,16 @@ import { NavLink } from "react-router-dom";
 export default function ProductsPage() {
     const [products, setProducts] = useState([])
     // const [cart, setCart] = useContext(CartContext)
-    const {Cart, addToCart, doIncrement, doDecrement, Delete} = useContext(CartContext);
+    const {cart, addToCart, doIncrement, doDecrement, Delete} = useContext(CartContext)
+
+
    
     useEffect(() => {
         async function getProducts() {
-            const resp = await fetch('https://api.escuelajs.co/api/v1/products')
+            const resp = await fetch('https://dummyjson.com/products')
             if (resp.ok) {
                 const data = await resp.json()
-                setProducts(data)
+                setProducts(data.products)
             }
         }
         getProducts()
@@ -49,11 +51,6 @@ export default function ProductsPage() {
                             className="mt-4 bg-[#56B280] text-white py-2 rounded-lg">
                             Add to Cart
                         </button>
-                         {/* <button onClick={() => Delete(product)}
-                            className="mt-4 bg-[#b25e56] text-white py-2 rounded-lg">
-                            Delete
-                        </button> */}
-
                     </NavLink>
 
                 ))}

@@ -9,7 +9,7 @@ export default function ProductItem() {
 
   useEffect(() => {
     async function getProduct() {
-      const resp = await fetch(`https://api.escuelajs.co/api/v1/products/${id}`);
+      const resp = await fetch(`https://dummyjson.com/products/${id}`);
       const data = await resp.json();
       setProduct(data);
     }
@@ -57,24 +57,11 @@ export default function ProductItem() {
             </label>
           </div>
 
-          <div className="flex items-center justify-between mb-5">
-            <div className="flex items-center border rounded-md">
-              {/* <button onClick={()=>doDecrement(product)}
-              className="px-2 text-gray-600">-</button>
-              <span className="px-3">
-                {Cart.find(item => item.id === product.id)?.quantity || 1}
-              </span>
-              <button onClick={()=>doIncrement(product)}
-              className="px-2 text-gray-600">+</button> */}
-            </div>
+          <div className="flex justify-center items-center mb-5 h-20">
             <button onClick={() => addToCart(product)}
               className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md transition">
               + Add to cart
             </button>
-            {/* <button onClick={()=>Delete(product)}
-              className="bg-red-300 hover:bg-amber-600 text-white px-5 py-2 rounded-md transition" >
-             -Delete
-            </button> */}
           </div>
 
           <p className="text-sm text-gray-500 mb-4 text-center">

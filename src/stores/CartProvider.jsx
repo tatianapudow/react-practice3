@@ -3,7 +3,7 @@ import { CartContext } from "./CartContext";
 
 export default function CartProvider({children}){
 
-    const [Cart,setCart]=useState([])
+    const [cart,setCart]=useState([])
     function doIncrement(id) {
         setCart((prev) => {
             return prev.map((p) => {
@@ -60,11 +60,12 @@ export default function CartProvider({children}){
         })
   })
   
+  
  
 }
     return(
         <CartContext.Provider
-            value={{Cart,addToCart,Delete,doDecrement,doIncrement}}>
+            value={{cart,addToCart,Delete,doDecrement,doIncrement}}>
             {children}
         </CartContext.Provider>
         

@@ -3,7 +3,7 @@ import { useState } from "react";
 import CartProvider from "../stores/CartProvider";
 
 export default function MainLayout(){
-  const [Cart, setCart] = useState([])
+//   const [Cart, setCart] = useState([])
 
     return(
         <CartProvider>
