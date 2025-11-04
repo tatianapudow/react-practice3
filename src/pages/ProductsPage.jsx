@@ -47,9 +47,9 @@ export default function ProductsPage() {
                             <Satrs rating={product.rating}/>
                         </div>
 
-                        <p className="text-gray-500 text-sm mt-1">{product.description}</p>
+                        <p className="text-gray-500 text-sm mt-1 flex-1">{product.description}</p>
                         <button onClick={() => addToCart(product)}
-                            className="mt-4 bg-[#56B280] text-white py-2 rounded-lg">
+                             className="mt-4 bg-[#56B280] text-white py-2 rounded-lg">
                             Add to Cart
                         </button>
                     </NavLink>
