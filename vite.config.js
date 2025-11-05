@@ -5,7 +5,21 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),
-    tailwindcss(),
+    tailwindcss(),],
+  //   css: {
+  //   preprocessorOptions: {
+  //     less: {
+  //       javascriptEnabled: true,
+  //     },
+  //   },
+  // },
+  // resolve: {
+  //   alias: [
+  //     {
+  //       find: /^antd\/es\/(.+)$/,
+  //       replacement: 'antd/es/$1',
+  //     },
+  //   ],
+  // },
    
-  ],
 })

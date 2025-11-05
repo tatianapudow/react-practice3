@@ -1,12 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../stores/CartContext";
+import React from 'react';
+import { Checkbox } from 'antd';
 
 export default function ProductItem() {
   const { id } = useParams({});
   const [product, setProduct] = useState({ images: [] });
 
-
+const onChange = e => {
+  console.log(`checked = ${e.target.checked}`);
+};
   useEffect(() => {
     async function getProduct() {
       const resp = await fetch(`https://dummyjson.com/products/${id}`);
@@ -48,11 +52,18 @@ export default function ProductItem() {
               <input type="radio" name="purchase" />
               <span className="text-sm text-gray-700">
                 Subscribe and delivery every
-                <select className="ml-2 border rounded-md px-2 py-1 text-sm">
+                {/* <select className="ml-2 border rounded-md px-2 py-1 text-sm">
                   <option>4 weeks</option>
                   <option>2 weeks</option>
                   <option>8 weeks</option>
-                </select>
+                </select> */}
+                
+                <Checkbox className="ml-2 border rounded-md px-2 py-1 text-sm" onChange={onChange}>4 weeks</Checkbox>
+                <Checkbox className="ml-2 border rounded-md px-2 py-1 text-sm" onChange={onChange}>2 weeks</Checkbox>
+                <Checkbox className="ml-2 border rounded-md px-2 py-1 text-sm" onChange={onChange}>8 weeks</Checkbox>
+               
+
+
               </span>
             </label>
           </div>
