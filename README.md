@@ -1,16 +1,73 @@
-# React + Vite
+# React Practice 3
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Учебный проект для практики работы с **React** — современным фреймворком для создания интерфейсов.  
+Проект создан в рамках изучения фронтенд-разработки и предназначен для демонстрации базовых навыков работы с компонентами, состоянием и маршрутизацией.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Описание проекта
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**React Practice 3** — это простое SPA-приложение (Single Page Application), которое демонстрирует:
+- создание и использование функциональных компонентов;
+- управление состоянием через React Hooks (`useState`, `useEffect`);
+- работу с пользовательским вводом и событиями;
+- маршрутизацию с помощью `react-router-dom`;
+- базовую структуру React-проекта.
 
-## Expanding the ESLint configuration
+Проект рассчитан на начинающих фронтенд-разработчиков, проходящих курс или практику по React.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+##  Установка и запуск
+
+1. **Склонировать репозиторий:**
+   ```bash
+   git clone https://github.com/tatianapudow/react-practice3.git
+2. **Перейти в папку проекта**
+    cd my-vite-app
+3. **Установить зависимости**   
+    npm install
+4. **Запустить приложение в режиме разработки**   
+    npm start
+После запуска приложение будет доступно по адресу:
+ http://localhost:3000
+
+##  Структура репозитория
+/my-vite-app
+├── public/                # Публичные файлы и шаблон index.html
+├── src/
+│   ├── components/        # Компоненты интерфейса
+│   ├── pages/             # Страницы приложения
+│   ├── App.js             # Главный компонент приложения
+│   ├── index.js           # Точка входа в приложение
+│   └── styles/            # CSS-стили
+├── package.json           # Зависимости и скрипты
+├── README.md              # Документация проекта
+└── .gitignore             # Исключения для Git
+
+
+##  Технические требования
+Язык: JavaScript (ES6+)
+
+Фреймворк: React 18+
+
+Менеджер пакетов: npm или yarn
+
+ОС: Windows / macOS / Linux
+
+Минимальные требования:
+
+Node.js v18+
+
+npm v9+
+
+Современный браузер (Chrome, Firefox, Edge)
+
+##  Авторы и участники
+
+Татьяна Пудова	Frontend-разработчик, автор проекта
+
+## Контактная информация
+Email: tatianapudowa@yandex.ru
+
+GitHub: @tatianapudow
