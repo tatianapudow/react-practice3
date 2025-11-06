@@ -97,6 +97,7 @@ my-vite-app/
 
 ## Контактная информация
 Email: tatianapudowa@yandex.ru
+
 GitHub: @tatianapudow
 
 ---
